@@ -14,7 +14,7 @@
         </div>
         <div class="m-auto sm:w-[1280px] h-[676px] flex flex-col justify-start space-y-5">
             <div name="Title" class="space-y-3">
-                <p class="">Deskripsi Module</p>
+                <p class="">Deskripsi Modul</p>
                 <textarea class="w-full sm:w-[630px] outline-green-111 rounded border-2 p-2 border-gray-200 resize-none"
                     name="Title" id="Title" cols="80" rows="6" placeholder="Masukkan Judul Modul"></textarea>
             </div>

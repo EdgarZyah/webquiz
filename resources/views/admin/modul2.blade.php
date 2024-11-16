@@ -5,7 +5,7 @@
         <div class="container space-y-5 m-auto px-3 sm:px-0 sm:w-[1440px] h-full sm:space-y-[32px]">
             <div
                 class="container font-inter text-2xl text-black h-fit relative flex flex-wrap justify-between sm:text-3xl sm:h-[40px]">
-                <h1>Daftar Module</h1>
+                <h1>Daftar Modul</h1>
                 <a href="/module/create" class="self-center">
                     <img class="w-6 h-6 bg-blend-color-burn hover:ring-1 hover:ring-green-111 sm:w-8 sm:h-8"
                         src="{{ URL('pictures/plus.png') }}" alt="whatsapp">
@@ -60,7 +60,7 @@
                         <!-- text  -->
                         <div
                             class="w-full flex justify-center font-inter p-3 sm:text-3xl text-2xl text-[14px] text-black">
-                            <p>Apakah anda yakin ingin menghapus quiz?</p>
+                            <p>Apakah anda yakin ingin menghapus quiz ini?</p>
                         </div>
                         <!-- button  -->
                         <div class="flex flex-row w-full gap-3 m-auto">

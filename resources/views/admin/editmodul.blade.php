@@ -8,7 +8,7 @@
         <div class="container resize-none m-auto h-[1024px] space-y-20">
             <div class="container m-auto h-[64px] flex flex-row justify-start space-x-20">
                 <div name="Title" class=" w-[630px] space-y-3">
-                    <p class="">Modul Title</p>
+                    <p class="">Judul Modul</p>
                     <textarea class="outline-green-111 rounded border-2 p-2 w-full sm:w-[630px] border-gray-200 resize-none"
                         name="moduletitle" id="moduletitle" cols="80" rows="2" placeholder="Masukkan Judul Modul"
                         autofocus required ">{{ old('question') ?? $moduls->moduletitle }}</textarea>
@@ -16,7 +16,7 @@
             </div>
             <div class="m-auto h-[676px] flex flex-col justify-start space-y-10">
                 <div name="Title" class="space-y-3">
-                    <p class="">Modul Description</p>
+                    <p class="">Deskripsi Modul</p>
                     <textarea class="outline-green-111 rounded border-2 p-2 w-full sm:w-[630px] border-gray-200 resize-none"
                         name="moduledesc" id="moduledesc" cols="80" rows="6" placeholder="Masukkan Judul Modul"
                         autofocus required value="{{ old ('moduledesc') }}">{{ old('question') ?? $moduls->moduledesc }}</textarea>
@@ -26,7 +26,7 @@
                         value="{{ old('question') ?? $moduls->media }}" onchange="previewImage()">
                 </div>
                 <div name="Title" class="space-y-3">
-                    <p class="">Modul Contents (khusus modul berbentuk gambar)</p>
+                    <p class="">Konten Modul (khusus modul berbentuk gambar)</p>
                     <textarea class="outline-green-111 rounded border-2 p-2 w-full sm:w-[630px] border-gray-200 resize-none"
                         name="moduledescimg" id="moduledescimg" cols="80" rows="6" placeholder="Masukkan Judul Modul" autofocus
                         value="{{ old ('moduledesc') }}">{{ old('question') ?? $moduls->moduledescimg }}</textarea>

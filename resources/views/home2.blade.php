@@ -2,85 +2,71 @@
 
 @section('container')
 <section>
-    <div class="bg-white ">
-        <div class="container px-6 py-4 mx-auto lg:flex lg:h-[800px] lg:py-20 ">
-            <div class="flex flex-col justify-center items-center w-full lg:flex-row lg:w-1/2">
-                <div class="max-w-lg">
-                    <p class="font-inter text-2xl pt-5 sm:pt-0 sm:text-4xl text-black tracking-wide">
-                        "Get Rid From Sadness With Pantun" </p>
-                    <p class="text-sm"></p>
-                    <br>
-                    <div class="backdrop-filter backdrop-blur-lg md:backdrop-filter-none bg-green-111">
-                        <!-- ... -->
-                    </div>
-                    <p class="mt-4 font-poppins">SmartPantun adalah sebuah platform digital yang menyediakan sarana
-                        belajar untuk pelajar yang ingin belajar pantun </p>
-                    <div class="mt-6">
-                        <button href="#" class="inline-block px-3 py-2 font-inter text-xs text-center text-white 
-                    bg-green-111 rounded-md focus:shadow-card">
-                            Read More</button>
-                    </div>
+    <div
+        class="bg-white flex-wrap min-h-screen w-full lg:w-[1024px] mx-auto justify-center space-y-16 py-6 px-6 lg:py-10 lg:px-20">
+        <!-- Hero Section -->
+        <div class="w-full flex flex-col lg:flex-row items-center space-x-0 lg:space-x-10">
+            <!-- Text Content -->
+            <div class="flex-col w-full lg:w-1/2 space-y-6">
+                <p class="font-inter text-2xl sm:text-4xl text-black tracking-wide">
+                    "Get Rid From Sadness With Study"
+                </p>
+                <p class="font-poppins text-lg sm:text-xl text-gray-600 text-justify">
+                    WebBelajar adalah platform digital inovatif yang dirancang khusus untuk membantu pelajar dalam
+                    mengakses berbagai materi pembelajaran secara online. Dengan berbagai fitur interaktif,
+                    WebBelajar memungkinkan pelajar untuk belajar kapan saja dan di mana saja dengan pengalaman
+                    belajar yang fleksibel dan menyenangkan!
+                </p>
+                <button
+                    class="bg-green-600 hover:bg-green-700 px-4 py-2 font-inter text-sm sm:text-base text-white rounded-md focus:ring focus:ring-green-300">
+                    Read More
+                </button>
+            </div>
+            <!-- Image Content -->
+            <div class="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0">
+                <img class="object-cover w-full max-w-2xl lg:h-auto" src="{{ URL('pictures/gambarhero.png') }}"
+                    alt="anak-kecil">
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="w-full flex flex-col items-center text-center space-y-4">
+            <p class="font-inter text-2xl sm:text-4xl text-black">Fitur Utama Kami</p>
+            <p class="font-poppins text-lg sm:text-xl text-gray-600">
+                Kami menyediakan dua fitur utama yaitu Quiz dan Modul
+            </p>
+        </div>
+
+        <!-- Features Cards -->
+        <div class="flex flex-col lg:flex-row justify-center space-y-10 lg:space-y-0 lg:space-x-10">
+            <!-- Quiz Feature -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start bg-gray-50 rounded-lg shadow-lg p-6 space-y-4">
+                <div class="flex items-center space-x-4">
+                    <img class="object-cover w-10" src="{{ URL('pictures/puzzle.png') }}" alt="icon-quiz">
+                    <h1 class="font-inter text-2xl text-black">Quiz</h1>
                 </div>
-            </div>
-            <div class="flex  self-center  w-full mt-2 lg:w-1/2">
-                <img class="object-cover w-full max-w-2xl lg:h-full" src="{{ URL('pictures/gambarhero.png') }}" alt="anak-kecil">
-            </div>
-        </div>
-    </div>
-</section>
-<section class="flex justify-center mx-auto">
-    <div class="text-center w-3/4">
-        <a class="font-inter text-2xl sm:text-4xl text-black">Fitur utama kami</a>
-        <br></br>
-        <a class="font-poppins text-xl text-grey-fade">Kami menyediakan kedua fitur utama kami yaitu quiz dan modul </a>
-    </div>
-    </div>
-</section>
-<!-- ... -->
-<section>
-    <div class="container gap-[60px] px-6 py-4 mx-auto lg:flex lg:h-[800px] lg:py-20 ">
-        <div class="flex flex-col justify-center items-center w-full lg:flex-row lg:w-1/2">
-            <div class="max-w-lg space-y-[24px]">
-                <img class="object-cover w-[40px] max-w-2xllg:h-full" src="{{ URL('pictures/puzzle.png') }}" alt="anak-kecil">
-                <h1 class="font-inter text-2xl text-black">Quiz</h1>
-                <p class="pb-[50px] sm:mt-4 font-poppins text-xl text-grey-fade">Didalam fitur kuis pelajar bisa
-                    menggunakan fitur ini untuk
-                    mencari dan
-                    mengerjakan sebuah kuis yang sudah disediakan
+                <p class="font-poppins text-lg text-gray-600 text-justify">
+                    Untuk mengukur pemahaman, WebBelajar menawarkan berbagai quiz yang dapat membantu pelajar
+                    menguji pengetahuan mereka setelah menyelesaikan modul pembelajaran, sehingga pelajar dapat
+                    terus berkembang dan memperdalam materi yang telah dipelajari.
                 </p>
             </div>
-        </div>
-        <!-- ... -->
-        <div class="flex flex-col justify-center items-center w-full lg:flex-row lg:w-1/2">
-            <div class="max-w-lg space-y-[24px]">
-                <img class="object-cover w-[40px] max-w-2xllg:h-full" src="{{ URL('pictures/buku.png') }}" alt="anak-kecil">
-                <h1 class="font-inter text-2xl text-black">Modul</h1>
-                <p class="pb-[50px] sm:mt-4 font-poppins text-xl text-grey-fade">Di dalam fitur modul pelajar bisa
-                    menggunakan fitur ini untuk
-                    menambah wawasan
-                    dengan cara membaca modul" pembelajaran yang disediakan
+
+            <!-- Modul Feature -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start bg-gray-50 rounded-lg shadow-lg p-6 space-y-4">
+                <div class="flex items-center space-x-4">
+                    <img class="object-cover w-10" src="{{ URL('pictures/puzzle.png') }}" alt="icon-modul">
+                    <h1 class="font-inter text-2xl text-black">Modul</h1>
+                </div>
+                <p class="font-poppins text-lg text-gray-600 text-justify">
+                    Di dalam fitur Modul, pelajar dapat memanfaatkan sarana ini untuk memperluas pengetahuan dan
+                    wawasan mereka dengan cara membaca materi pembelajaran yang disediakan. Setiap modul dirancang
+                    secara sistematis dan mudah dipahami, mencakup berbagai topik yang relevan dengan kurikulum dan
+                    kebutuhan pembelajaran. Modul-modul ini disusun oleh para ahli di bidangnya, sehingga memastikan
+                    kualitas informasi yang diberikan tepat, akurat, dan mudah dipelajari.
                 </p>
             </div>
         </div>
     </div>
 </section>
-<footer class="bottom-0 w-full static">
-    <div class="bg-green-111 h-fit bottom-0 text-white w-full h-full py-[80px] px-[50px] gap-5  mx-auto sm:px-[80px] sm:py-[55px] sm:h-[200px] flex flex-col sm:flex-row content-center sm:justify-between">
-        <div class="flex flex-col">
-            <span class="text-4xl font-medium">SmartPantun</span>
-        </div>
-        <div class="flex flex-col gap-3">
-            <a href="/aboutus" class="text-xl hover:underline">About Us</a>
-            <a href="/info" class="text-xl hover:underline">Info Pengembang</a>
-        </div>
-        <div class="flex flex-col gap-3 h-fit">
-            <span class="text-2xl">Contact</span>
-            <div class="flex flex-row w-full gap-2">
-                <img src="{{ URL('pictures/mail.png') }}" class="w-[32px] h-[32px]" alt="">
-                <span class="text-xl">smartpantun@gmail.com</span>
-            </div>
-            </div>
-        </div>
-    </div>
-</footer>
 @endsection

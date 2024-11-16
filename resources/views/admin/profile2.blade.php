@@ -1,42 +1,36 @@
 @extends('admin.partials.index')
 
 @section('container')
-<section class="mx-auto sm:px-20 px-10 flex h-full w-full flex-col">
-    <div class="mx-auto sm:px-20 px-10 flex h-full w-full flex-col gap-5">
-        <div class="container flex flex-col h-full w-full mx-auto ">
-            <h1 class="text-3xl">Bio</h1>
-            <br>
-            <div class="space-y-5 w-full sm:w-1/2 flex-col flex">
-                <div class="flex flex-row w-full gap-5 justify-between">
-                    <p>Nama
-                    <p>:</p>
-                    <p class="w-full">
-                        {{ Auth::user()->name}}
-                    </p>
-                </div>
-                <div class="flex flex-row w-full gap-5 justify-between">
-                    <p>Email
-                    <p>:</p>
-                    <p class="w-full">
-                        {{ Auth::user()->email}}
-                    </p>
-                </div>
+<section class="w-full flex flex-col items-center py-8 px-6 sm:px-12 bg-gray-50 min-h-screen">
+    <div class="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6 sm:p-8">
+        <!-- Profile Header -->
+        <div class="border-b pb-4 mb-6">
+            <h1 class="text-2xl sm:text-3xl font-semibold text-gray-800">Profil</h1>
+        </div>
+
+        <!-- Profile Information -->
+        <div class="space-y-6">
+            <div class="flex items-start sm:items-center gap-4">
+                <span class="text-lg font-medium text-gray-600">Nama&nbsp;:</span>
+                <p class="text-lg text-gray-800 w-full sm:w-auto">{{ Auth::user()->name }}</p>
             </div>
-            <br>
-            <div class="container flex flex-col mx-auto ">
+
+            <div class="flex items-start sm:items-center gap-4">
+                <span class="text-lg font-medium text-gray-600">Email&nbsp;:</span>
+                <p class="text-lg text-gray-800 w-full sm:w-auto">{{ Auth::user()->email }}</p>
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="mt-8 flex justify-end">
             <form action="/logout" method="POST">
-                <div>
-            @csrf
-            <button class="bg-green-111 px-4 py-2 rounded font-inter font-medium text-white hover:shadow-lg">
-                logout
-            </button>
-        </form>
-        
+                @csrf
+                <button type="submit"
+                    class="bg-green-111 px-6 py-2 rounded-lg font-medium text-white hover:bg-green-600 transition duration-300">
+                    Logout
+                </button>
+            </form>
         </div>
-        
-            
     </div>
-        </div>
-        
 </section>
 @endsection
