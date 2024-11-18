@@ -10,23 +10,25 @@
                 </div>
             </div>
             <!-- cardsection -->
-            <div class="container mx-auto flex gap-4 flex-wrap h-full pb-[10px] sm:w-[1280px] sm:flex-wrap">
-                <!-- card1 -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 @foreach ($moduls as $modul)
-                    <a href="#" class="h-fit">
-                        <div type="button" onclick="toggleModal('modal-'+{{$modul->id}})"
-                            class="container w-[150px] m-auto flex flex-col justify-start h-fit sm:w-[400px] sm:h-[430px] shadow-card rounded-[10px] bg-white">
-                            <div>
-                                <img class="mx-auto my-[15px] rounded-[10px] px-[10px] sm:w-[350px] sm:h-[185px]  "
-                                    src="{{ URL('pictures/templatemodul.png') }}" alt="thumbnail-modul">
-                                <h1 class="flex justify-start px-3 sm:px-7 text-[16px] sm:text-3xl ">
-                                    {{ $modul->moduletitle }}</h1>
-                                <p class="text-[12px] sm:text-[20px] flex flex-col  justify-start px-3 sm:px-7">
-                                    {{ $modul->moduledesc }}</p>
+                    <!-- Card -->
+                    <a href="#" class="block">
+                        <div type="button" onclick="toggleModal('modal-{{ $modul->id }}')"
+                            class="bg-white shadow-card rounded-lg overflow-hidden hover:shadow-lg transition duration-200">
+                            <img src="{{ URL('pictures/templatemodul.png') }}" alt="thumbnail-modul"
+                                class="w-full h-32 sm:h-48 object-cover">
+                            <div class="p-4 space-y-2">
+                                <h1 class="text-lg font-medium text-black sm:text-xl">
+                                    {{ $modul->moduletitle }}
+                                </h1>
+                                <p class="text-sm text-gray-600 sm:text-base">
+                                    {{ $modul->moduledesc }}
+                                </p>
                             </div>
-                            <div
-                                class="container justify-end w-full h-auto flex pr-3 sm:pr-5 mb-3 sm:mb-5 mt-auto flex-row">
-                                <img class="w-[16px] h-[16px] sm:w-[24px] sm:h-[24px]" src="{{ URL('pictures/go.png') }}" alt="">
+                            <div class="flex justify-end p-4">
+                                <img src="{{ URL('pictures/go.png') }}" alt="Go"
+                                    class="w-6 h-6 sm:w-8 sm:h-8">
                             </div>
                         </div>
                     </a>

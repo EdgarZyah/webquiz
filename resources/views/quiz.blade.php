@@ -10,34 +10,27 @@
                     <h1>Daftar Quiz</h1>
                 </div>
             </div>
-            <div
-                class="hidden container font-inter text-grey-fade h-fit space-x-3 justify-start m-auto sm:w-[1280px] lg:flex-row sm:space-y-0 sm:space-x-5">
-                <a class="hover:text-green-111 focus:text-green-111" href="#">Terbaru</a>
-                <a class="hover:text-green-111 focus:text-green-111" href="#">Mudah</a>
-                <a class="hover:text-green-111 focus:text-green-111" href="#">Sedang</a>
-                <a class="hover:text-green-111 focus:text-green-111" href="#">Sulit</a>
-            </div>
-            <!-- cardsection -->
 
-            <div class="container m-auto flex gap-4 flex-wrap h-fit pb-[10px] sm:w-[1280px] sm:flex-wrap ">
+            <!-- cardsection -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 @foreach ($quizs as $quiz)
-                    <!-- card1 -->
-                    <a href="#">
-                        <div type="button" onclick="toggleModal('modal-'+{{$quiz->id}})"
-                            class="toggleModal container w-[150px] mx-auto flex flex-col justify-start h-fit sm:w-[400px] sm:space-y-3 sm:h-fit shadow-card rounded-[10px] bg-white">
-                            <div>
-                                <img class="my-[15px] mx-auto rounded-sm px-[10px] sm:w-[350px] sm:h-[185px]  "
-                                    src="{{ asset('storage/'.$quiz->media) }}" alt="thumbnail-modul">
-                                <h1
-                                    class="flex justify-start font-inter text-[14px] sm:text-3xl text-black px-3 sm:px-7 font-medium ">
-                                    {{$quiz->quiztitle}}</h1>
-                                <p class="font-poppins sm:text-xl text-[12px] text-grey-fade flex flex-col font-light justify-start px-3 sm:px-7">
-                                    {{ substr(strip_tags($quiz->quizdesc),0 ,50) }}</p>
+                    <!-- Card -->
+                    <a href="#" class="block">
+                        <div type="button" onclick="toggleModal('modal-{{ $quiz->id }}')"
+                            class="bg-white shadow-card rounded-lg overflow-hidden hover:shadow-lg transition duration-200">
+                            <img src="{{ asset('storage/'.$quiz->media) }}" alt="thumbnail-modul"
+                                class="w-full h-32 sm:h-48 object-cover">
+                            <div class="p-4 space-y-2">
+                                <h1 class="text-sm sm:text-lg font-medium text-black">
+                                    {{$quiz->quiztitle}}
+                                </h1>
+                                <p class="text-xs sm:text-sm text-gray-600">
+                                    {{ substr(strip_tags($quiz->quizdesc), 0, 50) }}...
+                                </p>
                             </div>
-                            <!-- tanda panah klo bukan admin -->
-                            <div
-                                class="container justify-end w-full h-auto flex pb-3 sm:pb-5 pr-3 sm:pr-5 sm:mb-5 mt-auto flex-row">
-                                <img class="w-[16px] h-[16px] sm:w-[50px] sm:h-[50px]" src="pictures/go.png" alt="">
+                            <div class="flex justify-end p-4">
+                                <img src="pictures/go.png" alt="Go"
+                                    class="w-6 h-6 sm:w-8 sm:h-8">
                             </div>
                         </div>
                     </a>
