@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->string('moduletitle');
-            $table->text('moduledesc');
-            $table->text('moduledescimg');
+            $table->text('moduledesc')->nullable();
+            $table->text('moduledescimg')->nullable();
             $table->string('media');
             $table->timestamps();
         });
